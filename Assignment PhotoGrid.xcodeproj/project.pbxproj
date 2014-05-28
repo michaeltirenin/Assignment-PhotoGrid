@@ -112,11 +112,8 @@
 		F2C06F461935B25F0016ACA1 /* Assignment PhotoGrid */ = {
 			isa = PBXGroup;
 			children = (
-				F2C06F4F1935B25F0016ACA1 /* MTAppDelegate.h */,
-				F2C06F501935B25F0016ACA1 /* MTAppDelegate.m */,
-				F2C06F521935B25F0016ACA1 /* Main.storyboard */,
-				F2C06F551935B25F0016ACA1 /* MTViewController.h */,
-				F2C06F561935B25F0016ACA1 /* MTViewController.m */,
+				F2C06F751935B26C0016ACA1 /* Views */,
+				F2C06F761935B2760016ACA1 /* Controllers */,
 				F2C06F581935B25F0016ACA1 /* Images.xcassets */,
 				F2C06F471935B25F0016ACA1 /* Supporting Files */,
 			);
@@ -126,6 +123,8 @@
 		F2C06F471935B25F0016ACA1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F2C06F4F1935B25F0016ACA1 /* MTAppDelegate.h */,
+				F2C06F501935B25F0016ACA1 /* MTAppDelegate.m */,
 				F2C06F481935B25F0016ACA1 /* Assignment PhotoGrid-Info.plist */,
 				F2C06F491935B25F0016ACA1 /* InfoPlist.strings */,
 				F2C06F4C1935B25F0016ACA1 /* main.m */,
@@ -150,6 +149,23 @@
 				F2C06F681935B25F0016ACA1 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F2C06F751935B26C0016ACA1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F2C06F521935B25F0016ACA1 /* Main.storyboard */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		F2C06F761935B2760016ACA1 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F2C06F551935B25F0016ACA1 /* MTViewController.h */,
+				F2C06F561935B25F0016ACA1 /* MTViewController.m */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
