@@ -50,6 +50,10 @@
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Mzz-zC-9oO" appends="YES" id="lgb-Lf-OES"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" title="Ron Mueck Sculpture" id="Dyi-we-SY4"/>
                     <connections>
@@ -57,6 +61,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="Mzz-zC-9oO">
+                    <connections>
+                        <action selector="handleLongPressGesture:" destination="vXZ-lx-hvc" id="AGg-qz-S5c"/>
+                    </connections>
+                </pongPressGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="664" y="138"/>
         </scene>

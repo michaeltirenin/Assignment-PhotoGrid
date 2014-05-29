@@ -10,31 +10,6 @@
 
 @implementation MTFLowLayout
 
-//- (UICollectionViewLayoutAttributes *)layoutAttributesForItemAtIndexPath:(NSIndexPath *)indexPath
-//{
-//    // Get the current attributes for the item at the indexPath
-//    UICollectionViewLayoutAttributes *attributes = [super layoutAttributesForItemAtIndexPath:indexPath];
-//    
-//    // Modify them to match the *pinch* values
-//    [self modifyLayoutAttributes:attributes];
-//    
-//    // Return them to collection view
-//    return attributes;
-//}
-
-//- (NSArray *)layoutAttributesForElementsInRect:(CGRect)rect
-//{
-//    // Get all the attributes for the elements in the specified frame
-//    NSArray *allAttributesInRect = [super layoutAttributesForElementsInRect:rect];
-//    
-//    for (UICollectionViewLayoutAttributes *cellAttributes in allAttributesInRect)
-//    {
-//        // Modify the attributes for the cells in the frame rect
-//        [self modifyLayoutAttributes:cellAttributes];
-//    }
-//    return allAttributesInRect;
-//}
-
 //- (void)modifyLayoutAttributes:(UICollectionViewLayoutAttributes *)layoutAttributes
 //{
 //    // If the indexPath matches the one we have stored
@@ -46,19 +21,18 @@
 //        layoutAttributes.zIndex = 1;
 //    }
 //}
-//
-//
-//- (void)setCurrentCellScale:(CGFloat)scale;
-//{
-//    _currentCellScale = scale;
-//    [self invalidateLayout];
-//}
-//
-//- (void)setCurrentCellCenter:(CGPoint)origin
-//{
-//    _currentCellCenter = origin;
-//    [self invalidateLayout];
-//}
+
+- (void)setCurrentCellScale:(CGFloat)scale;
+{
+    _currentCellScale = scale;
+    [self invalidateLayout];
+}
+
+- (void)setCurrentCellCenter:(CGPoint)origin
+{
+    _currentCellCenter = origin;
+    [self invalidateLayout];
+}
 
 - (id)init
 {
@@ -75,17 +49,19 @@
     return self;
 }
 
--(void)prepareLayout {
+- (void)prepareLayout
+{
+    
     [super prepareLayout];
     
-    // Need to overflow our actual visible rect slightly to avoid flickering.
+    // Need to overflow actual visible rect slightly to avoid flickering.
     CGRect visibleRect = CGRectInset((CGRect){.origin = self.collectionView.bounds.origin, .size = self.collectionView.frame.size}, -100, -100);
     
     NSArray *itemsInVisibleRectArray = [super layoutAttributesForElementsInRect:visibleRect];
     
     NSSet *itemsIndexPathsInVisibleRectSet = [NSSet setWithArray:[itemsInVisibleRectArray valueForKey:@"indexPath"]];
     
-    // Step 1: Remove any behaviours that are no longer visible.
+    // Remove any behaviours that are no longer visible.
     NSArray *noLongerVisibleBehaviours = [self.animator.behaviors filteredArrayUsingPredicate:[NSPredicate predicateWithBlock:^BOOL(UIAttachmentBehavior *behaviour, NSDictionary *bindings) {
         BOOL currentlyVisible = [itemsIndexPathsInVisibleRectSet member:[[[behaviour items] firstObject] indexPath]] != nil;
         return !currentlyVisible;
@@ -96,7 +72,7 @@
         [self.visibleIndexPathsSet removeObject:[[[obj items] firstObject] indexPath]];
     }];
     
-    // Step 2: Add any newly visible behaviours.
+    // Add any newly visible behaviours.
     // A "newly visible" item is one that is in the itemsInVisibleRect(Set|Array) but not in the visibleIndexPathsSet
     NSArray *newlyVisibleItems = [itemsInVisibleRectArray filteredArrayUsingPredicate:[NSPredicate predicateWithBlock:^BOOL(UICollectionViewLayoutAttributes *item, NSDictionary *bindings) {
         BOOL currentlyVisible = [self.visibleIndexPathsSet member:item.indexPath] != nil;
@@ -134,6 +110,24 @@
 }
 
 -(NSArray *)layoutAttributesForElementsInRect:(CGRect)rect {
+
+    return [self.animator itemsInRect:rect];
+//
+//    NSArray *answer = [[super layoutAttributesForElementsInRect:rect] mutableCopy];
+//    
+//    for(int i = 1; i < [answer count]; ++i) {
+//        UICollectionViewLayoutAttributes *currentLayoutAttributes = answer[i];
+//        UICollectionViewLayoutAttributes *prevLayoutAttributes = answer[i - 1];
+//        NSInteger maximumSpacing = 10;
+//        NSInteger origin = CGRectGetMaxX(prevLayoutAttributes.frame);
+//        if(origin + maximumSpacing + currentLayoutAttributes.frame.size.height < self.collectionViewContentSize.height) {
+//            CGRect frame = currentLayoutAttributes.frame;
+//            frame.origin.y = origin + maximumSpacing;
+//            currentLayoutAttributes.frame = frame;
+//        }
+//    }
+//    return answer;
+
 //    // Get all the attributes for the elements in the specified frame
 //    NSArray *allAttributesInRect = [super layoutAttributesForElementsInRect:rect];
 //    
@@ -144,7 +138,6 @@
 //    }
 //    return allAttributesInRect;
 
-    return [self.animator itemsInRect:rect];
 }
 
 -(UICollectionViewLayoutAttributes *)layoutAttributesForItemAtIndexPath:(NSIndexPath *)indexPath {
@@ -161,7 +154,7 @@
 
 }
 
--(BOOL)shouldInvalidateLayoutForBoundsChange:(CGRect)newBounds {
+- (BOOL)shouldInvalidateLayoutForBoundsChange:(CGRect)newBounds {
     UIScrollView *scrollView = self.collectionView;
     CGFloat delta = newBounds.origin.y - scrollView.bounds.origin.y;
     
