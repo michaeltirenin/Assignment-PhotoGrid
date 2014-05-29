@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F21BF6DA1937AEB400CB966E /* ronmueck51.png in Resources */ = {isa = PBXBuildFile; fileRef = F21BF6D91937AEB400CB966E /* ronmueck51.png */; };
 		F2C06F411935B25F0016ACA1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2C06F401935B25F0016ACA1 /* Foundation.framework */; };
 		F2C06F431935B25F0016ACA1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2C06F421935B25F0016ACA1 /* CoreGraphics.framework */; };
 		F2C06F451935B25F0016ACA1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2C06F441935B25F0016ACA1 /* UIKit.framework */; };
@@ -21,6 +22,58 @@
 		F2C06F621935B25F0016ACA1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2C06F441935B25F0016ACA1 /* UIKit.framework */; };
 		F2C06F6A1935B25F0016ACA1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F2C06F681935B25F0016ACA1 /* InfoPlist.strings */; };
 		F2C06F6C1935B25F0016ACA1 /* Assignment_PhotoGridTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F2C06F6B1935B25F0016ACA1 /* Assignment_PhotoGridTests.m */; };
+		F2C06F791936C0950016ACA1 /* MTPhotoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F2C06F781936C0950016ACA1 /* MTPhotoCell.m */; };
+		F2C06FAC1936C6200016ACA1 /* ronmueck01.png in Resources */ = {isa = PBXBuildFile; fileRef = F2C06F7A1936C6200016ACA1 /* ronmueck01.png */; };
+		F2C06FAD1936C6200016ACA1 /* ronmueck02.png in Resources */ = {isa = PBXBuildFile; fileRef = F2C06F7B1936C6200016ACA1 /* ronmueck02.png */; };
+		F2C06FAE1936C6200016ACA1 /* ronmueck03.png in Resources */ = {isa = PBXBuildFile; fileRef = F2C06F7C1936C6200016ACA1 /* ronmueck03.png */; };
+		F2C06FAF1936C6200016ACA1 /* ronmueck04.png in Resources */ = {isa = PBXBuildFile; fileRef = F2C06F7D1936C6200016ACA1 /* ronmueck04.png */; };
+		F2C06FB01936C6200016ACA1 /* ronmueck05.png in Resources */ = {isa = PBXBuildFile; fileRef = F2C06F7E1936C6200016ACA1 /* ronmueck05.png */; };
+		F2C06FB11936C6200016ACA1 /* ronmueck06.png in Resources */ = {isa = PBXBuildFile; fileRef = F2C06F7F1936C6200016ACA1 /* ronmueck06.png */; };
+		F2C06FB21936C6200016ACA1 /* ronmueck07.png in Resources */ = {isa = PBXBuildFile; fileRef = F2C06F801936C6200016ACA1 /* ronmueck07.png */; };
+		F2C06FB31936C6200016ACA1 /* ronmueck08.png in Resources */ = {isa = PBXBuildFile; fileRef = F2C06F811936C6200016ACA1 /* ronmueck08.png */; };
+		F2C06FB41936C6200016ACA1 /* ronmueck09.png in Resources */ = {isa = PBXBuildFile; fileRef = F2C06F821936C6200016ACA1 /* ronmueck09.png */; };
+		F2C06FB51936C6200016ACA1 /* ronmueck10.png in Resources */ = {isa = PBXBuildFile; fileRef = F2C06F831936C6200016ACA1 /* ronmueck10.png */; };
+		F2C06FB61936C6200016ACA1 /* ronmueck11.png in Resources */ = {isa = PBXBuildFile; fileRef = F2C06F841936C6200016ACA1 /* ronmueck11.png */; };
+		F2C06FB71936C6200016ACA1 /* ronmueck12.png in Resources */ = {isa = PBXBuildFile; fileRef = F2C06F851936C6200016ACA1 /* ronmueck12.png */; };
+		F2C06FB81936C6200016ACA1 /* ronmueck13.png in Resources */ = {isa = PBXBuildFile; fileRef = F2C06F861936C6200016ACA1 /* ronmueck13.png */; };
+		F2C06FB91936C6200016ACA1 /* ronmueck14.png in Resources */ = {isa = PBXBuildFile; fileRef = F2C06F871936C6200016ACA1 /* ronmueck14.png */; };
+		F2C06FBA1936C6200016ACA1 /* ronmueck15.png in Resources */ = {isa = PBXBuildFile; fileRef = F2C06F881936C6200016ACA1 /* ronmueck15.png */; };
+		F2C06FBB1936C6200016ACA1 /* ronmueck16.png in Resources */ = {isa = PBXBuildFile; fileRef = F2C06F891936C6200016ACA1 /* ronmueck16.png */; };
+		F2C06FBC1936C6200016ACA1 /* ronmueck17.png in Resources */ = {isa = PBXBuildFile; fileRef = F2C06F8A1936C6200016ACA1 /* ronmueck17.png */; };
+		F2C06FBD1936C6200016ACA1 /* ronmueck18.png in Resources */ = {isa = PBXBuildFile; fileRef = F2C06F8B1936C6200016ACA1 /* ronmueck18.png */; };
+		F2C06FBE1936C6200016ACA1 /* ronmueck19.png in Resources */ = {isa = PBXBuildFile; fileRef = F2C06F8C1936C6200016ACA1 /* ronmueck19.png */; };
+		F2C06FBF1936C6200016ACA1 /* ronmueck20.png in Resources */ = {isa = PBXBuildFile; fileRef = F2C06F8D1936C6200016ACA1 /* ronmueck20.png */; };
+		F2C06FC01936C6200016ACA1 /* ronmueck21.png in Resources */ = {isa = PBXBuildFile; fileRef = F2C06F8E1936C6200016ACA1 /* ronmueck21.png */; };
+		F2C06FC11936C6200016ACA1 /* ronmueck22.png in Resources */ = {isa = PBXBuildFile; fileRef = F2C06F8F1936C6200016ACA1 /* ronmueck22.png */; };
+		F2C06FC21936C6200016ACA1 /* ronmueck23.png in Resources */ = {isa = PBXBuildFile; fileRef = F2C06F901936C6200016ACA1 /* ronmueck23.png */; };
+		F2C06FC31936C6200016ACA1 /* ronmueck24.png in Resources */ = {isa = PBXBuildFile; fileRef = F2C06F911936C6200016ACA1 /* ronmueck24.png */; };
+		F2C06FC41936C6200016ACA1 /* ronmueck25.png in Resources */ = {isa = PBXBuildFile; fileRef = F2C06F921936C6200016ACA1 /* ronmueck25.png */; };
+		F2C06FC51936C6200016ACA1 /* ronmueck26.png in Resources */ = {isa = PBXBuildFile; fileRef = F2C06F931936C6200016ACA1 /* ronmueck26.png */; };
+		F2C06FC61936C6200016ACA1 /* ronmueck27.png in Resources */ = {isa = PBXBuildFile; fileRef = F2C06F941936C6200016ACA1 /* ronmueck27.png */; };
+		F2C06FC71936C6200016ACA1 /* ronmueck28.png in Resources */ = {isa = PBXBuildFile; fileRef = F2C06F951936C6200016ACA1 /* ronmueck28.png */; };
+		F2C06FC81936C6200016ACA1 /* ronmueck29.png in Resources */ = {isa = PBXBuildFile; fileRef = F2C06F961936C6200016ACA1 /* ronmueck29.png */; };
+		F2C06FC91936C6200016ACA1 /* ronmueck30.png in Resources */ = {isa = PBXBuildFile; fileRef = F2C06F971936C6200016ACA1 /* ronmueck30.png */; };
+		F2C06FCA1936C6200016ACA1 /* ronmueck31.png in Resources */ = {isa = PBXBuildFile; fileRef = F2C06F981936C6200016ACA1 /* ronmueck31.png */; };
+		F2C06FCB1936C6200016ACA1 /* ronmueck32.png in Resources */ = {isa = PBXBuildFile; fileRef = F2C06F991936C6200016ACA1 /* ronmueck32.png */; };
+		F2C06FCC1936C6200016ACA1 /* ronmueck33.png in Resources */ = {isa = PBXBuildFile; fileRef = F2C06F9A1936C6200016ACA1 /* ronmueck33.png */; };
+		F2C06FCD1936C6200016ACA1 /* ronmueck34.png in Resources */ = {isa = PBXBuildFile; fileRef = F2C06F9B1936C6200016ACA1 /* ronmueck34.png */; };
+		F2C06FCE1936C6200016ACA1 /* ronmueck35.png in Resources */ = {isa = PBXBuildFile; fileRef = F2C06F9C1936C6200016ACA1 /* ronmueck35.png */; };
+		F2C06FCF1936C6200016ACA1 /* ronmueck36.png in Resources */ = {isa = PBXBuildFile; fileRef = F2C06F9D1936C6200016ACA1 /* ronmueck36.png */; };
+		F2C06FD01936C6200016ACA1 /* ronmueck37.png in Resources */ = {isa = PBXBuildFile; fileRef = F2C06F9E1936C6200016ACA1 /* ronmueck37.png */; };
+		F2C06FD11936C6200016ACA1 /* ronmueck38.png in Resources */ = {isa = PBXBuildFile; fileRef = F2C06F9F1936C6200016ACA1 /* ronmueck38.png */; };
+		F2C06FD21936C6200016ACA1 /* ronmueck39.png in Resources */ = {isa = PBXBuildFile; fileRef = F2C06FA01936C6200016ACA1 /* ronmueck39.png */; };
+		F2C06FD31936C6200016ACA1 /* ronmueck40.png in Resources */ = {isa = PBXBuildFile; fileRef = F2C06FA11936C6200016ACA1 /* ronmueck40.png */; };
+		F2C06FD41936C6200016ACA1 /* ronmueck41.png in Resources */ = {isa = PBXBuildFile; fileRef = F2C06FA21936C6200016ACA1 /* ronmueck41.png */; };
+		F2C06FD51936C6200016ACA1 /* ronmueck42.png in Resources */ = {isa = PBXBuildFile; fileRef = F2C06FA31936C6200016ACA1 /* ronmueck42.png */; };
+		F2C06FD61936C6200016ACA1 /* ronmueck43.png in Resources */ = {isa = PBXBuildFile; fileRef = F2C06FA41936C6200016ACA1 /* ronmueck43.png */; };
+		F2C06FD71936C6200016ACA1 /* ronmueck44.png in Resources */ = {isa = PBXBuildFile; fileRef = F2C06FA51936C6200016ACA1 /* ronmueck44.png */; };
+		F2C06FD81936C6200016ACA1 /* ronmueck45.png in Resources */ = {isa = PBXBuildFile; fileRef = F2C06FA61936C6200016ACA1 /* ronmueck45.png */; };
+		F2C06FD91936C6200016ACA1 /* ronmueck46.png in Resources */ = {isa = PBXBuildFile; fileRef = F2C06FA71936C6200016ACA1 /* ronmueck46.png */; };
+		F2C06FDA1936C6200016ACA1 /* ronmueck47.png in Resources */ = {isa = PBXBuildFile; fileRef = F2C06FA81936C6200016ACA1 /* ronmueck47.png */; };
+		F2C06FDB1936C6200016ACA1 /* ronmueck48.png in Resources */ = {isa = PBXBuildFile; fileRef = F2C06FA91936C6200016ACA1 /* ronmueck48.png */; };
+		F2C06FDC1936C6200016ACA1 /* ronmueck49.png in Resources */ = {isa = PBXBuildFile; fileRef = F2C06FAA1936C6200016ACA1 /* ronmueck49.png */; };
+		F2C06FDD1936C6200016ACA1 /* ronmueck50.png in Resources */ = {isa = PBXBuildFile; fileRef = F2C06FAB1936C6200016ACA1 /* ronmueck50.png */; };
+		F2C06FE21936E7990016ACA1 /* MTFLowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = F2C06FE11936E7990016ACA1 /* MTFLowLayout.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +87,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F21BF6D91937AEB400CB966E /* ronmueck51.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ronmueck51.png; sourceTree = "<group>"; };
 		F2C06F3D1935B25F0016ACA1 /* Assignment PhotoGrid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Assignment PhotoGrid.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2C06F401935B25F0016ACA1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F2C06F421935B25F0016ACA1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -53,6 +107,61 @@
 		F2C06F671935B25F0016ACA1 /* Assignment PhotoGridTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Assignment PhotoGridTests-Info.plist"; sourceTree = "<group>"; };
 		F2C06F691935B25F0016ACA1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F2C06F6B1935B25F0016ACA1 /* Assignment_PhotoGridTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Assignment_PhotoGridTests.m; sourceTree = "<group>"; };
+		F2C06F771936C0950016ACA1 /* MTPhotoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTPhotoCell.h; sourceTree = "<group>"; };
+		F2C06F781936C0950016ACA1 /* MTPhotoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTPhotoCell.m; sourceTree = "<group>"; };
+		F2C06F7A1936C6200016ACA1 /* ronmueck01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ronmueck01.png; sourceTree = "<group>"; };
+		F2C06F7B1936C6200016ACA1 /* ronmueck02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ronmueck02.png; sourceTree = "<group>"; };
+		F2C06F7C1936C6200016ACA1 /* ronmueck03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ronmueck03.png; sourceTree = "<group>"; };
+		F2C06F7D1936C6200016ACA1 /* ronmueck04.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ronmueck04.png; sourceTree = "<group>"; };
+		F2C06F7E1936C6200016ACA1 /* ronmueck05.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ronmueck05.png; sourceTree = "<group>"; };
+		F2C06F7F1936C6200016ACA1 /* ronmueck06.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ronmueck06.png; sourceTree = "<group>"; };
+		F2C06F801936C6200016ACA1 /* ronmueck07.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ronmueck07.png; sourceTree = "<group>"; };
+		F2C06F811936C6200016ACA1 /* ronmueck08.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ronmueck08.png; sourceTree = "<group>"; };
+		F2C06F821936C6200016ACA1 /* ronmueck09.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ronmueck09.png; sourceTree = "<group>"; };
+		F2C06F831936C6200016ACA1 /* ronmueck10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ronmueck10.png; sourceTree = "<group>"; };
+		F2C06F841936C6200016ACA1 /* ronmueck11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ronmueck11.png; sourceTree = "<group>"; };
+		F2C06F851936C6200016ACA1 /* ronmueck12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ronmueck12.png; sourceTree = "<group>"; };
+		F2C06F861936C6200016ACA1 /* ronmueck13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ronmueck13.png; sourceTree = "<group>"; };
+		F2C06F871936C6200016ACA1 /* ronmueck14.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ronmueck14.png; sourceTree = "<group>"; };
+		F2C06F881936C6200016ACA1 /* ronmueck15.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ronmueck15.png; sourceTree = "<group>"; };
+		F2C06F891936C6200016ACA1 /* ronmueck16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ronmueck16.png; sourceTree = "<group>"; };
+		F2C06F8A1936C6200016ACA1 /* ronmueck17.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ronmueck17.png; sourceTree = "<group>"; };
+		F2C06F8B1936C6200016ACA1 /* ronmueck18.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ronmueck18.png; sourceTree = "<group>"; };
+		F2C06F8C1936C6200016ACA1 /* ronmueck19.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ronmueck19.png; sourceTree = "<group>"; };
+		F2C06F8D1936C6200016ACA1 /* ronmueck20.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ronmueck20.png; sourceTree = "<group>"; };
+		F2C06F8E1936C6200016ACA1 /* ronmueck21.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ronmueck21.png; sourceTree = "<group>"; };
+		F2C06F8F1936C6200016ACA1 /* ronmueck22.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ronmueck22.png; sourceTree = "<group>"; };
+		F2C06F901936C6200016ACA1 /* ronmueck23.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ronmueck23.png; sourceTree = "<group>"; };
+		F2C06F911936C6200016ACA1 /* ronmueck24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ronmueck24.png; sourceTree = "<group>"; };
+		F2C06F921936C6200016ACA1 /* ronmueck25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ronmueck25.png; sourceTree = "<group>"; };
+		F2C06F931936C6200016ACA1 /* ronmueck26.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ronmueck26.png; sourceTree = "<group>"; };
+		F2C06F941936C6200016ACA1 /* ronmueck27.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ronmueck27.png; sourceTree = "<group>"; };
+		F2C06F951936C6200016ACA1 /* ronmueck28.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ronmueck28.png; sourceTree = "<group>"; };
+		F2C06F961936C6200016ACA1 /* ronmueck29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ronmueck29.png; sourceTree = "<group>"; };
+		F2C06F971936C6200016ACA1 /* ronmueck30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ronmueck30.png; sourceTree = "<group>"; };
+		F2C06F981936C6200016ACA1 /* ronmueck31.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ronmueck31.png; sourceTree = "<group>"; };
+		F2C06F991936C6200016ACA1 /* ronmueck32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ronmueck32.png; sourceTree = "<group>"; };
+		F2C06F9A1936C6200016ACA1 /* ronmueck33.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ronmueck33.png; sourceTree = "<group>"; };
+		F2C06F9B1936C6200016ACA1 /* ronmueck34.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ronmueck34.png; sourceTree = "<group>"; };
+		F2C06F9C1936C6200016ACA1 /* ronmueck35.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ronmueck35.png; sourceTree = "<group>"; };
+		F2C06F9D1936C6200016ACA1 /* ronmueck36.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ronmueck36.png; sourceTree = "<group>"; };
+		F2C06F9E1936C6200016ACA1 /* ronmueck37.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ronmueck37.png; sourceTree = "<group>"; };
+		F2C06F9F1936C6200016ACA1 /* ronmueck38.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ronmueck38.png; sourceTree = "<group>"; };
+		F2C06FA01936C6200016ACA1 /* ronmueck39.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ronmueck39.png; sourceTree = "<group>"; };
+		F2C06FA11936C6200016ACA1 /* ronmueck40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ronmueck40.png; sourceTree = "<group>"; };
+		F2C06FA21936C6200016ACA1 /* ronmueck41.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ronmueck41.png; sourceTree = "<group>"; };
+		F2C06FA31936C6200016ACA1 /* ronmueck42.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ronmueck42.png; sourceTree = "<group>"; };
+		F2C06FA41936C6200016ACA1 /* ronmueck43.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ronmueck43.png; sourceTree = "<group>"; };
+		F2C06FA51936C6200016ACA1 /* ronmueck44.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ronmueck44.png; sourceTree = "<group>"; };
+		F2C06FA61936C6200016ACA1 /* ronmueck45.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ronmueck45.png; sourceTree = "<group>"; };
+		F2C06FA71936C6200016ACA1 /* ronmueck46.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ronmueck46.png; sourceTree = "<group>"; };
+		F2C06FA81936C6200016ACA1 /* ronmueck47.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ronmueck47.png; sourceTree = "<group>"; };
+		F2C06FA91936C6200016ACA1 /* ronmueck48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ronmueck48.png; sourceTree = "<group>"; };
+		F2C06FAA1936C6200016ACA1 /* ronmueck49.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ronmueck49.png; sourceTree = "<group>"; };
+		F2C06FAB1936C6200016ACA1 /* ronmueck50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ronmueck50.png; sourceTree = "<group>"; };
+		F2C06FE01936E7990016ACA1 /* MTFLowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTFLowLayout.h; sourceTree = "<group>"; };
+		F2C06FE11936E7990016ACA1 /* MTFLowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTFLowLayout.m; sourceTree = "<group>"; };
+		F2C06FF519372D7A0016ACA1 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +210,7 @@
 		F2C06F3F1935B25F0016ACA1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F2C06FF519372D7A0016ACA1 /* AVFoundation.framework */,
 				F2C06F401935B25F0016ACA1 /* Foundation.framework */,
 				F2C06F421935B25F0016ACA1 /* CoreGraphics.framework */,
 				F2C06F441935B25F0016ACA1 /* UIKit.framework */,
@@ -112,8 +222,10 @@
 		F2C06F461935B25F0016ACA1 /* Assignment PhotoGrid */ = {
 			isa = PBXGroup;
 			children = (
-				F2C06F751935B26C0016ACA1 /* Views */,
-				F2C06F761935B2760016ACA1 /* Controllers */,
+				F2C06FDF1936E6070016ACA1 /* Model */,
+				F2C06F751935B26C0016ACA1 /* View */,
+				F2C06F761935B2760016ACA1 /* Controller */,
+				F2C06FDE1936C62C0016ACA1 /* Photos */,
 				F2C06F581935B25F0016ACA1 /* Images.xcassets */,
 				F2C06F471935B25F0016ACA1 /* Supporting Files */,
 			);
@@ -151,21 +263,90 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		F2C06F751935B26C0016ACA1 /* Views */ = {
+		F2C06F751935B26C0016ACA1 /* View */ = {
 			isa = PBXGroup;
 			children = (
 				F2C06F521935B25F0016ACA1 /* Main.storyboard */,
+				F2C06FE01936E7990016ACA1 /* MTFLowLayout.h */,
+				F2C06FE11936E7990016ACA1 /* MTFLowLayout.m */,
 			);
-			name = Views;
+			name = View;
 			sourceTree = "<group>";
 		};
-		F2C06F761935B2760016ACA1 /* Controllers */ = {
+		F2C06F761935B2760016ACA1 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
 				F2C06F551935B25F0016ACA1 /* MTViewController.h */,
 				F2C06F561935B25F0016ACA1 /* MTViewController.m */,
 			);
-			name = Controllers;
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		F2C06FDE1936C62C0016ACA1 /* Photos */ = {
+			isa = PBXGroup;
+			children = (
+				F2C06F7A1936C6200016ACA1 /* ronmueck01.png */,
+				F2C06F7B1936C6200016ACA1 /* ronmueck02.png */,
+				F2C06F7C1936C6200016ACA1 /* ronmueck03.png */,
+				F2C06F7D1936C6200016ACA1 /* ronmueck04.png */,
+				F2C06F7E1936C6200016ACA1 /* ronmueck05.png */,
+				F2C06F7F1936C6200016ACA1 /* ronmueck06.png */,
+				F2C06F801936C6200016ACA1 /* ronmueck07.png */,
+				F2C06F811936C6200016ACA1 /* ronmueck08.png */,
+				F2C06F821936C6200016ACA1 /* ronmueck09.png */,
+				F2C06F831936C6200016ACA1 /* ronmueck10.png */,
+				F2C06F841936C6200016ACA1 /* ronmueck11.png */,
+				F2C06F851936C6200016ACA1 /* ronmueck12.png */,
+				F2C06F861936C6200016ACA1 /* ronmueck13.png */,
+				F2C06F871936C6200016ACA1 /* ronmueck14.png */,
+				F2C06F881936C6200016ACA1 /* ronmueck15.png */,
+				F2C06F891936C6200016ACA1 /* ronmueck16.png */,
+				F2C06F8A1936C6200016ACA1 /* ronmueck17.png */,
+				F2C06F8B1936C6200016ACA1 /* ronmueck18.png */,
+				F2C06F8C1936C6200016ACA1 /* ronmueck19.png */,
+				F2C06F8D1936C6200016ACA1 /* ronmueck20.png */,
+				F2C06F8E1936C6200016ACA1 /* ronmueck21.png */,
+				F2C06F8F1936C6200016ACA1 /* ronmueck22.png */,
+				F2C06F901936C6200016ACA1 /* ronmueck23.png */,
+				F2C06F911936C6200016ACA1 /* ronmueck24.png */,
+				F2C06F921936C6200016ACA1 /* ronmueck25.png */,
+				F2C06F931936C6200016ACA1 /* ronmueck26.png */,
+				F2C06F941936C6200016ACA1 /* ronmueck27.png */,
+				F2C06F951936C6200016ACA1 /* ronmueck28.png */,
+				F2C06F961936C6200016ACA1 /* ronmueck29.png */,
+				F2C06F971936C6200016ACA1 /* ronmueck30.png */,
+				F2C06F981936C6200016ACA1 /* ronmueck31.png */,
+				F2C06F991936C6200016ACA1 /* ronmueck32.png */,
+				F2C06F9A1936C6200016ACA1 /* ronmueck33.png */,
+				F2C06F9B1936C6200016ACA1 /* ronmueck34.png */,
+				F2C06F9C1936C6200016ACA1 /* ronmueck35.png */,
+				F2C06F9D1936C6200016ACA1 /* ronmueck36.png */,
+				F2C06F9E1936C6200016ACA1 /* ronmueck37.png */,
+				F2C06F9F1936C6200016ACA1 /* ronmueck38.png */,
+				F2C06FA01936C6200016ACA1 /* ronmueck39.png */,
+				F2C06FA11936C6200016ACA1 /* ronmueck40.png */,
+				F2C06FA21936C6200016ACA1 /* ronmueck41.png */,
+				F2C06FA31936C6200016ACA1 /* ronmueck42.png */,
+				F2C06FA41936C6200016ACA1 /* ronmueck43.png */,
+				F2C06FA51936C6200016ACA1 /* ronmueck44.png */,
+				F2C06FA61936C6200016ACA1 /* ronmueck45.png */,
+				F2C06FA71936C6200016ACA1 /* ronmueck46.png */,
+				F2C06FA81936C6200016ACA1 /* ronmueck47.png */,
+				F2C06FA91936C6200016ACA1 /* ronmueck48.png */,
+				F2C06FAA1936C6200016ACA1 /* ronmueck49.png */,
+				F2C06FAB1936C6200016ACA1 /* ronmueck50.png */,
+				F21BF6D91937AEB400CB966E /* ronmueck51.png */,
+			);
+			name = Photos;
+			sourceTree = "<group>";
+		};
+		F2C06FDF1936E6070016ACA1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F2C06F771936C0950016ACA1 /* MTPhotoCell.h */,
+				F2C06F781936C0950016ACA1 /* MTPhotoCell.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -245,9 +426,60 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2C06FC01936C6200016ACA1 /* ronmueck21.png in Resources */,
+				F2C06FDB1936C6200016ACA1 /* ronmueck48.png in Resources */,
+				F2C06FBF1936C6200016ACA1 /* ronmueck20.png in Resources */,
+				F2C06FCD1936C6200016ACA1 /* ronmueck34.png in Resources */,
 				F2C06F591935B25F0016ACA1 /* Images.xcassets in Resources */,
+				F2C06FD91936C6200016ACA1 /* ronmueck46.png in Resources */,
+				F2C06FB31936C6200016ACA1 /* ronmueck08.png in Resources */,
+				F2C06FD21936C6200016ACA1 /* ronmueck39.png in Resources */,
+				F2C06FCE1936C6200016ACA1 /* ronmueck35.png in Resources */,
+				F2C06FB41936C6200016ACA1 /* ronmueck09.png in Resources */,
+				F2C06FDC1936C6200016ACA1 /* ronmueck49.png in Resources */,
+				F2C06FDD1936C6200016ACA1 /* ronmueck50.png in Resources */,
+				F2C06FBE1936C6200016ACA1 /* ronmueck19.png in Resources */,
+				F2C06FAF1936C6200016ACA1 /* ronmueck04.png in Resources */,
+				F2C06FB01936C6200016ACA1 /* ronmueck05.png in Resources */,
+				F2C06FBB1936C6200016ACA1 /* ronmueck16.png in Resources */,
+				F2C06FB91936C6200016ACA1 /* ronmueck14.png in Resources */,
+				F2C06FD51936C6200016ACA1 /* ronmueck42.png in Resources */,
+				F2C06FC21936C6200016ACA1 /* ronmueck23.png in Resources */,
+				F2C06FBD1936C6200016ACA1 /* ronmueck18.png in Resources */,
 				F2C06F4B1935B25F0016ACA1 /* InfoPlist.strings in Resources */,
+				F2C06FBA1936C6200016ACA1 /* ronmueck15.png in Resources */,
+				F2C06FAE1936C6200016ACA1 /* ronmueck03.png in Resources */,
+				F2C06FC31936C6200016ACA1 /* ronmueck24.png in Resources */,
+				F2C06FC81936C6200016ACA1 /* ronmueck29.png in Resources */,
+				F2C06FB61936C6200016ACA1 /* ronmueck11.png in Resources */,
+				F2C06FAC1936C6200016ACA1 /* ronmueck01.png in Resources */,
+				F2C06FC61936C6200016ACA1 /* ronmueck27.png in Resources */,
+				F2C06FB81936C6200016ACA1 /* ronmueck13.png in Resources */,
+				F2C06FD01936C6200016ACA1 /* ronmueck37.png in Resources */,
+				F2C06FCF1936C6200016ACA1 /* ronmueck36.png in Resources */,
+				F2C06FBC1936C6200016ACA1 /* ronmueck17.png in Resources */,
+				F2C06FD71936C6200016ACA1 /* ronmueck44.png in Resources */,
+				F2C06FC71936C6200016ACA1 /* ronmueck28.png in Resources */,
+				F2C06FCC1936C6200016ACA1 /* ronmueck33.png in Resources */,
+				F2C06FC41936C6200016ACA1 /* ronmueck25.png in Resources */,
+				F2C06FAD1936C6200016ACA1 /* ronmueck02.png in Resources */,
+				F2C06FCA1936C6200016ACA1 /* ronmueck31.png in Resources */,
 				F2C06F541935B25F0016ACA1 /* Main.storyboard in Resources */,
+				F21BF6DA1937AEB400CB966E /* ronmueck51.png in Resources */,
+				F2C06FB51936C6200016ACA1 /* ronmueck10.png in Resources */,
+				F2C06FC51936C6200016ACA1 /* ronmueck26.png in Resources */,
+				F2C06FDA1936C6200016ACA1 /* ronmueck47.png in Resources */,
+				F2C06FB21936C6200016ACA1 /* ronmueck07.png in Resources */,
+				F2C06FD31936C6200016ACA1 /* ronmueck40.png in Resources */,
+				F2C06FC91936C6200016ACA1 /* ronmueck30.png in Resources */,
+				F2C06FB71936C6200016ACA1 /* ronmueck12.png in Resources */,
+				F2C06FC11936C6200016ACA1 /* ronmueck22.png in Resources */,
+				F2C06FD11936C6200016ACA1 /* ronmueck38.png in Resources */,
+				F2C06FCB1936C6200016ACA1 /* ronmueck32.png in Resources */,
+				F2C06FD41936C6200016ACA1 /* ronmueck41.png in Resources */,
+				F2C06FD61936C6200016ACA1 /* ronmueck43.png in Resources */,
+				F2C06FD81936C6200016ACA1 /* ronmueck45.png in Resources */,
+				F2C06FB11936C6200016ACA1 /* ronmueck06.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,6 +501,8 @@
 				F2C06F4D1935B25F0016ACA1 /* main.m in Sources */,
 				F2C06F571935B25F0016ACA1 /* MTViewController.m in Sources */,
 				F2C06F511935B25F0016ACA1 /* MTAppDelegate.m in Sources */,
+				F2C06F791936C0950016ACA1 /* MTPhotoCell.m in Sources */,
+				F2C06FE21936E7990016ACA1 /* MTFLowLayout.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -473,6 +707,7 @@
 				F2C06F711935B25F0016ACA1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F2C06F721935B25F0016ACA1 /* Build configuration list for PBXNativeTarget "Assignment PhotoGridTests" */ = {
 			isa = XCConfigurationList;
@@ -481,6 +716,7 @@
 				F2C06F741935B25F0016ACA1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
