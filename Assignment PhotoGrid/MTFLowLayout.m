@@ -10,28 +10,13 @@
 
 @implementation MTFLowLayout
 
-//- (void)modifyLayoutAttributes:(UICollectionViewLayoutAttributes *)layoutAttributes
-//{
-//    // If the indexPath matches the one we have stored
-//    if ([layoutAttributes.indexPath isEqual:_currentCellPath])
-//    {
-//        // Assign the new layout attributes
-//        layoutAttributes.transform3D = CATransform3DMakeScale(_currentCellScale, _currentCellScale, 1.0);
-//        layoutAttributes.center = _currentCellCenter;
-//        layoutAttributes.zIndex = 1;
-//    }
-//}
-
-- (void)setCurrentCellScale:(CGFloat)scale;
-{
-    _currentCellScale = scale;
-    [self invalidateLayout];
+-(UICollectionViewLayoutAttributes *)layoutAttributesForItemAtIndexPath:(NSIndexPath *)indexPath {
+    return [self.animator layoutAttributesForCellAtIndexPath:indexPath];
 }
 
-- (void)setCurrentCellCenter:(CGPoint)origin
-{
-    _currentCellCenter = origin;
-    [self invalidateLayout];
+-(NSArray *)layoutAttributesForElementsInRect:(CGRect)rect {
+    
+    return [self.animator itemsInRect:rect];
 }
 
 - (id)init
@@ -109,50 +94,6 @@
     }];
 }
 
--(NSArray *)layoutAttributesForElementsInRect:(CGRect)rect {
-
-    return [self.animator itemsInRect:rect];
-//
-//    NSArray *answer = [[super layoutAttributesForElementsInRect:rect] mutableCopy];
-//    
-//    for(int i = 1; i < [answer count]; ++i) {
-//        UICollectionViewLayoutAttributes *currentLayoutAttributes = answer[i];
-//        UICollectionViewLayoutAttributes *prevLayoutAttributes = answer[i - 1];
-//        NSInteger maximumSpacing = 10;
-//        NSInteger origin = CGRectGetMaxX(prevLayoutAttributes.frame);
-//        if(origin + maximumSpacing + currentLayoutAttributes.frame.size.height < self.collectionViewContentSize.height) {
-//            CGRect frame = currentLayoutAttributes.frame;
-//            frame.origin.y = origin + maximumSpacing;
-//            currentLayoutAttributes.frame = frame;
-//        }
-//    }
-//    return answer;
-
-//    // Get all the attributes for the elements in the specified frame
-//    NSArray *allAttributesInRect = [super layoutAttributesForElementsInRect:rect];
-//    
-//    for (UICollectionViewLayoutAttributes *cellAttributes in allAttributesInRect)
-//    {
-//        // Modify the attributes for the cells in the frame rect
-//        [self modifyLayoutAttributes:cellAttributes];
-//    }
-//    return allAttributesInRect;
-
-}
-
--(UICollectionViewLayoutAttributes *)layoutAttributesForItemAtIndexPath:(NSIndexPath *)indexPath {
-//    // Get the current attributes for the item at the indexPath
-//    UICollectionViewLayoutAttributes *attributes = [super layoutAttributesForItemAtIndexPath:indexPath];
-//
-//    // Modify them to match the *pinch* values
-//    [self modifyLayoutAttributes:attributes];
-//    
-//    // Return them to collection view
-//    return attributes;
-    
-    return [self.animator layoutAttributesForCellAtIndexPath:indexPath];
-
-}
 
 - (BOOL)shouldInvalidateLayoutForBoundsChange:(CGRect)newBounds {
     UIScrollView *scrollView = self.collectionView;

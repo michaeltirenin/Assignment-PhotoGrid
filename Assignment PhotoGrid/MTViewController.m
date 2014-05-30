@@ -33,136 +33,9 @@
     _photos = [@[@"ronmueck01", @"ronmueck02", @"ronmueck03", @"ronmueck04", @"ronmueck05", @"ronmueck06", @"ronmueck07", @"ronmueck08", @"ronmueck09", @"ronmueck10", @"ronmueck11", @"ronmueck12", @"ronmueck13", @"ronmueck14", @"ronmueck15", @"ronmueck16", @"ronmueck17", @"ronmueck18", @"ronmueck19", @"ronmueck20", @"ronmueck21", @"ronmueck22", @"ronmueck23", @"ronmueck24", @"ronmueck25", @"ronmueck26", @"ronmueck27", @"ronmueck28", @"ronmueck29", @"ronmueck30", @"ronmueck31", @"ronmueck32", @"ronmueck33", @"ronmueck34", @"ronmueck35", @"ronmueck36", @"ronmueck37", @"ronmueck38", @"ronmueck39", @"ronmueck40", @"ronmueck41", @"ronmueck42", @"ronmueck43", @"ronmueck44", @"ronmueck45", @"ronmueck46", @"ronmueck47", @"ronmueck48", @"ronmueck49", @"ronmueck50", @"ronmueck51"] mutableCopy];    
 
     UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longPressGestureRecognized:)];
+    
     [self.collectionView addGestureRecognizer:longPress];
 }
-
-- (IBAction)longPressGestureRecognized:(id)sender
-{
-    
-    UILongPressGestureRecognizer *longPress = (UILongPressGestureRecognizer *)sender;
-    UIGestureRecognizerState state = longPress.state;
-    
-    CGPoint location = [longPress locationInView:self.collectionView];
-    NSIndexPath *indexPath = [self.collectionView indexPathForItemAtPoint:location];
-    
-    static UIView       *snapshot = nil;        ///< A snapshot of the row user is moving.
-    static NSIndexPath  *sourceIndexPath = nil; ///< Initial index path, where gesture begins.
-    
-    switch (state) {
-        case UIGestureRecognizerStateBegan: {
-            if (indexPath) {
-                sourceIndexPath = indexPath;
-                
-                UICollectionViewCell *cell = [self.collectionView cellForItemAtIndexPath:indexPath];
-                
-                // Take a snapshot of the selected row using helper method.
-                snapshot = [self customSnapshotFromView:cell];
-                
-                // Add the snapshot as subview, centered at cell's center...
-                __block CGPoint center = cell.center;
-                snapshot.center = center;
-                snapshot.alpha = 0.0;
-                [self.collectionView addSubview:snapshot];
-                [UIView animateWithDuration:0.25 animations:^{
-                    
-                    // Offset for gesture location.
-                    center.y = location.y;
-                    snapshot.center = center;
-                    snapshot.transform = CGAffineTransformMakeScale(1.05, 1.05);
-                    snapshot.alpha = 0.98;
-                    
-                    // Black out.
-                    cell.backgroundColor = [UIColor blackColor];
-                } completion:nil];
-            }
-            break;
-        }
-        case UIGestureRecognizerStateChanged: {
-            CGPoint center = snapshot.center;
-            center.y = location.y;
-            snapshot.center = center;
-            
-            // Is destination valid and is it different from source?
-            if (indexPath && ![indexPath isEqual:sourceIndexPath]) {
-                
-                // ... update data source.
-                [_photos exchangeObjectAtIndex:indexPath.row withObjectAtIndex:sourceIndexPath.row];
-                
-                // ... move the rows.
-                [self.collectionView moveItemAtIndexPath:sourceIndexPath toIndexPath:indexPath];
-                
-                // ... and update source so it is in sync with UI changes.
-                sourceIndexPath = indexPath;
-            }
-            break;
-        }
-        default: {
-            // Clean up.
-            UICollectionViewCell *cell = [self.collectionView cellForItemAtIndexPath:sourceIndexPath];
-            [UIView animateWithDuration:0.25 animations:^{
-                
-                snapshot.center = cell.center;
-                snapshot.transform = CGAffineTransformIdentity;
-                snapshot.alpha = 0.0;
-                
-                // Undo the black-out effect we did.
-                cell.backgroundColor = [UIColor whiteColor];
-                
-            } completion:^(BOOL finished) {
-                
-                [snapshot removeFromSuperview];
-                snapshot = nil;
-                
-            }];
-            sourceIndexPath = nil;
-            break;
-        }
-    }
-}
-// testing ...
-//- (IBAction)handleLongPressGesture:(UILongPressGestureRecognizer *)gestureRecognizer
-//{
-//    if ([gestureRecognizer state] == UIGestureRecognizerStateBegan) {
-//        
-//        [self becomeFirstResponder];
-//        self.collectionView = [gestureRecognizer view];
-//
-//        NSString *menuItemTitle = NSLocalizedString(@"Long Press", @"Reset menu item title");
-//        UIMenuItem *resetMenuItem = [[UIMenuItem alloc] initWithTitle:menuItemTitle action:@selector(resetPiece:)];
-//        
-//        UIMenuController *menuController = [UIMenuController sharedMenuController];
-//        [menuController setMenuItems:@[resetMenuItem]];
-//        
-//        CGPoint location = [gestureRecognizer locationInView:[gestureRecognizer view]];
-//        CGRect menuLocation = CGRectMake(location.x, location.y, 0, 0);
-//        [menuController setTargetRect:menuLocation inView:[gestureRecognizer view]];
-//        
-//        [menuController setMenuVisible:YES animated:YES];
-//    }
-//}
-
-//// testing ...
-//- (void)resetPiece:(UIMenuController *)controller
-//{
-//    UIView *pieceForReset = self.pieceForReset;
-//    
-//    CGPoint centerPoint = CGPointMake(CGRectGetMidX(pieceForReset.bounds), CGRectGetMidY(pieceForReset.bounds));
-//    CGPoint locationInSuperview = [pieceForReset convertPoint:centerPoint toView:[pieceForReset superview]];
-//    
-//    [[pieceForReset layer] setAnchorPoint:CGPointMake(0.5, 0.5)];
-//    [pieceForReset setCenter:locationInSuperview];
-//    
-//    [UIView beginAnimations:nil context:nil];
-//    [pieceForReset setTransform:CGAffineTransformIdentity];
-//    [UIView commitAnimations];
-//}
-
-// testing ...
-// UIMenuController requires that we can become first responder or it won't display
-//- (BOOL)canBecomeFirstResponder
-//{
-//    return YES;
-//}
 
 #pragma mark - UICollectionViewDataSource
 
@@ -179,13 +52,14 @@
     long row = [indexPath row];
     
     image = [UIImage imageNamed:_photos[row]];
-    
-    cell.photoView.image = image;
+
+    cell.photoView.contentMode = UIViewContentModeScaleAspectFill;
     
     cell.backgroundColor = [UIColor whiteColor];
-    
     cell.layer.borderWidth = 5.f;
     cell.layer.borderColor = [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1].CGColor;
+    
+    cell.photoView.image = image;
     
     return cell;
 }
@@ -199,9 +73,9 @@ static const float HEIGHT = 145;
 {
     UIImage *image;
     long row = [indexPath row];
-
+    
     image = [UIImage imageNamed:_photos[row]];
-
+    
     if (image.size.height != image.size.width) {
         
         return CGSizeMake(WIDTH, (image.size.height * (WIDTH/image.size.width)));
@@ -216,17 +90,105 @@ static const float HEIGHT = 145;
 
 #pragma mark - UICollectionViewDelegate
 
-//- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
-//{
-//    long row = [indexPath row];
-//    
-//    [_photos removeObjectAtIndex:row];
-//    
-//    NSArray *deletions = @[indexPath];
-//    
-//    [self.collectionView deleteItemsAtIndexPaths:deletions];
-//}
-//
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    long row = [indexPath row];
+    
+    [_photos removeObjectAtIndex:row];
+    
+    NSArray *deletions = @[indexPath];
+    
+    [self.collectionView deleteItemsAtIndexPaths:deletions];
+}
+
+- (IBAction)longPressGestureRecognized:(id)sender
+{
+    UILongPressGestureRecognizer *longPress = (UILongPressGestureRecognizer *)sender;
+    UIGestureRecognizerState state = longPress.state;
+    
+    CGPoint location = [longPress locationInView:self.collectionView];
+    NSIndexPath *indexPath = [self.collectionView indexPathForItemAtPoint:location];
+    
+    static UIView       *snapshot = nil;        ///< A snapshot of the row user is moving.
+    static NSIndexPath  *sourceIndexPath = nil; ///< Initial index path, where gesture begins.
+    
+    switch (state) {
+        case UIGestureRecognizerStateBegan:
+            if (indexPath) {
+                sourceIndexPath = indexPath;
+                
+                MTPhotoCell *cell = (MTPhotoCell *)[self.collectionView cellForItemAtIndexPath:indexPath];
+                
+                // Take a snapshot of the selected row using helper method.
+                snapshot = [self customSnapshotFromView:cell];
+                
+                // Add the snapshot as subview, centered at cell's center...
+                __block CGPoint center = cell.center;
+                snapshot.center = center;
+                snapshot.alpha = 0.0;
+                [self.collectionView addSubview:snapshot];
+                [UIView animateWithDuration:0.25 animations:^{
+                    
+                    // Offset for gesture location.
+                    center.y = location.y;
+                    center.x = location.x;
+                    snapshot.center = center;
+                    snapshot.transform = CGAffineTransformMakeScale(1.5, 1.5); // used 1.5 instead of 2.0
+                    snapshot.alpha = 0.98;
+                    
+                    // Black out.
+                    cell.hidden = YES;
+                    
+                } completion:nil];
+            }
+            break;
+        
+        case UIGestureRecognizerStateChanged: {
+            CGPoint center = snapshot.center;
+            center.y = location.y;
+            center.x = location.x;
+            snapshot.center = center;
+            
+            
+            // Is destination valid and is it different from source?
+            if (indexPath && ![indexPath isEqual:sourceIndexPath]) {
+                
+                // ... update data source.
+                [self.photos exchangeObjectAtIndex:indexPath.row withObjectAtIndex:sourceIndexPath.row];
+                
+                // ... move the rows.
+                [self.collectionView moveItemAtIndexPath:sourceIndexPath toIndexPath:indexPath];
+                
+                // ... and update source so it is in sync with UI changes.
+                sourceIndexPath = indexPath;
+            }
+            break;
+        }
+        default: {
+            // Clean up.
+            MTPhotoCell *cell = (MTPhotoCell *)[self.collectionView cellForItemAtIndexPath:sourceIndexPath];
+            [UIView animateWithDuration:0.25 animations:^{
+                
+                snapshot.center = cell.center;
+                snapshot.transform = CGAffineTransformIdentity;
+                snapshot.alpha = 0.0;
+                
+                // Undo the black-out effect we did.
+                
+                cell.hidden = NO;
+
+            } completion:^(BOOL finished) {
+                
+                [snapshot removeFromSuperview];
+                snapshot = nil;
+                
+            }];
+            sourceIndexPath = nil;
+            break;
+        }
+    }
+}
+
 - (UIView *)customSnapshotFromView:(UIView *)inputView {
     
     UIView *snapshot = [inputView snapshotViewAfterScreenUpdates:YES];
