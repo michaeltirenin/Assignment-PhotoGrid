@@ -58,7 +58,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
-                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="Mzz-zC-9oO"/>
             </objects>
             <point key="canvasLocation" x="664" y="138"/>
         </scene>
