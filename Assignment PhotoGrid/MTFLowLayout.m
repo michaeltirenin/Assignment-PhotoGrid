@@ -34,6 +34,17 @@
     return self;
 }
 
+//- (UICollectionViewLayoutAttributes *)initialLayoutAttributesForAppearingItemAtIndexPath:(NSIndexPath *)itemIndexPath
+//{
+//    UICollectionViewLayoutAttributes *pose = [super initialLayoutAttributesForAppearingItemAtIndexPath:itemIndexPath];
+//    if () {
+//        CGRect frame = pose.frame;
+//        frame.origin.y = ;
+//        pose.frame = frame;
+//    }
+//    return pose;
+//}
+
 - (void)prepareLayout
 {
     

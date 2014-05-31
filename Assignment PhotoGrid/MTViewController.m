@@ -88,6 +88,16 @@ static const float HEIGHT = 145;
     return UIEdgeInsetsMake(10, 10, 10, 10);
 }
 
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section
+{
+    return 10.0f;
+}
+
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section
+{
+    return 10.0f;
+}
+
 #pragma mark - UICollectionViewDelegate
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
@@ -153,12 +163,14 @@ static const float HEIGHT = 145;
             // Is destination valid and is it different from source?
             if (indexPath && ![indexPath isEqual:sourceIndexPath]) {
                 
+
                 // ... update data source.
-                [self.photos exchangeObjectAtIndex:indexPath.row withObjectAtIndex:sourceIndexPath.row];
+//                [self.photos exchangeObjectAtIndex:indexPath.row withObjectAtIndex:sourceIndexPath.row];
+                
                 
                 // ... move the rows.
                 [self.collectionView moveItemAtIndexPath:sourceIndexPath toIndexPath:indexPath];
-                
+
                 // ... and update source so it is in sync with UI changes.
                 sourceIndexPath = indexPath;
             }

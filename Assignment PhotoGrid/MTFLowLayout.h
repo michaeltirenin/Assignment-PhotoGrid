@@ -10,9 +10,9 @@
 
 @interface MTFLowLayout : UICollectionViewFlowLayout
 
-@property (strong, nonatomic) NSIndexPath *currentCellPath;
-@property (nonatomic) CGPoint currentCellCenter;
-@property (nonatomic) CGFloat currentCellScale;
+//@property (strong, nonatomic) NSIndexPath *currentCellPath;
+//@property (nonatomic) CGPoint currentCellCenter;
+//@property (nonatomic) CGFloat currentCellScale;
 
 @property (strong, nonatomic) UIDynamicAnimator *animator;
 @property (nonatomic, strong) NSMutableSet *visibleIndexPathsSet;
